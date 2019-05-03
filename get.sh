@@ -20,9 +20,9 @@ PLATFORM=""
 JVMVERSION=""
 SDK_RESOURCE="nightly"
 CUSTOMIZED_SDK_URL=""
-OPENJ9_REPO="https://github.com/eclipse/openj9.git"
+OPENJ9_REPO="https://github.com/nickkard/openj9.git"
 OPENJ9_SHA=""
-OPENJ9_BRANCH=""
+OPENJ9_BRANCH="v0.14.1-release"
 VENDOR_REPOS=""
 VENDOR_SHAS=""
 VENDOR_BRANCHES=""
@@ -213,7 +213,7 @@ getTestKitGenAndFunctionalTestMaterial()
 
 	if [ "$OPENJ9_BRANCH" != "" ]
 	then
-		OPENJ9_BRANCH="-b $OPENJ9_BRANCH"
+		OPENJ9_BRANCH="-b $OPENJ9_BRANCH --single-branch"
 	fi
 
 	echo "git clone $OPENJ9_BRANCH $OPENJ9_REPO"
